@@ -1,5 +1,12 @@
 # README
 
+<!-- #3778c2 (main)
+#5fb523 (second)
+#434b54 (text) -->
+
+<!-- headlines: proxima nova bold
+general text: proxima nova light -->
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
