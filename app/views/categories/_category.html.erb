@@ -1,0 +1,20 @@
+<%= link_to category_path(category), id: dom_id(category), class: "card mx-2 mb-2 d-flex gap-1" do %>
+
+  <%= image_tag url_for(category.icon), width: 70, height: 70 if category.icon.attached? %>
+
+  <div class="d-flex flex-column w-100 gap-1">
+    <div class="h-100 d-flex justify-content-between align-items-center">
+      <p class="text-bold text-gray-lighter">
+        <%= category.name %> 
+      </p>
+    </div>
+
+    <hr class="separator"/>
+
+ 
+    <p class="text-caption text-gray-lighter">
+      <%= category.created_at.strftime("%d %b %Y") %>
+    </p>
+  </div>
+<% end %>
+

@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="container-fluid" style="background-color: #3778c2; text-align: center; padding: 10px;">
+      <%= link_to categories_path, class: 'nav-icon', style: 'float: left;' do %>
+      <i class="fa fa-arrow-left" aria-hidden="true" style="color: #fff; font-size: 1.5em;"></i>
+    <% end %>
+ 
+    <h3 style="color: #fff; margin: 0 auto; max-width: 80%;"><%= title %></h3>
+    <%= button_to destroy_user_session_path, method: :delete, class: 'nav-icon', style: 'float: right; background-color: #3778c2; border: none; cursor: pointer;' do %>
+      <i class="fa fa-power-off" aria-hidden="true" style="color: #fff; font-size: 1.5em;"></i>
+    <% end %> 
+  </div>
+</nav>

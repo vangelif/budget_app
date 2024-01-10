@@ -1,0 +1,16 @@
+<!-- _footer.html.erb -->
+<footer class="footer">
+  <div class="container-fluid" style="background-color: #f8f9fa; text-align: center; padding: 10px;">
+    <% if title == 'ADD NEW CATEGORY' %>
+      <%= link_to new_category_path, class: 'btn btn-primary', style: 'background-color: #5fb523; cursor: pointer;' do %>
+        <%= title %>
+      <% end %>
+    <% elsif title == 'ADD NEW EXPENSE' %>
+      <%= link_to expenses_new_path, class: 'btn btn-primary', style: 'background-color: #5fb523; cursor: pointer;' do %>
+        <%= title %>
+      <% end %>
+    <% end %>
+  </div>
+</footer>
+
+

@@ -1,1 +1,11 @@
-<h1>hello!!</h1>
+<%= render 'shared/header', title: 'CATEGORIES' %>
+
+
+<% @categories.each do |category| %>
+  <div class="category">
+    <%= render partial: 'category', locals: { category: category } %>
+
+  </div>
+<% end %>
+
+<%= render 'shared/footer', title: 'ADD NEW CATEGORY' %>
