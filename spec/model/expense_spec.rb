@@ -12,35 +12,35 @@ RSpec.describe Expense, type: :model do
   end
 
   it 'is not valid without a name' do
-    expense = Expense.new(amount: 50.0, user: user)
+    expense = Expense.new(amount: 50.0, user:)
     expect(expense).to_not be_valid
   end
 
   it 'is not valid without an amount' do
-    expense = Expense.new(name: 'Groceries', user: user)
+    expense = Expense.new(name: 'Groceries', user:)
     expect(expense).to_not be_valid
   end
 
   it 'is not valid with a negative amount' do
-    expense = Expense.new(name: 'Groceries', amount: -20.0, user: user)
+    expense = Expense.new(name: 'Groceries', amount: -20.0, user:)
     expect(expense).to_not be_valid
   end
 
   it 'is valid with a name, a non-negative amount, and a user' do
-    expense = Expense.new(name: 'Groceries', amount: 50.0, user: user)
+    expense = Expense.new(name: 'Groceries', amount: 50.0, user:)
     expect(expense).to be_valid
   end
 
   it 'belongs to a user' do
-    expense = Expense.new(name: 'Groceries', amount: 50.0, user: user)
+    expense = Expense.new(name: 'Groceries', amount: 50.0, user:)
     expect(expense.user).to eq(user)
   end
 
   it 'has and belongs to many categories' do
-    category1 = Category.create(name: 'Food', user: user)
-    category2 = Category.create(name: 'Shopping', user: user)
+    category1 = Category.create(name: 'Food', user:)
+    category2 = Category.create(name: 'Shopping', user:)
 
-    expense = Expense.new(name: 'Groceries', amount: 50.0, user: user)
+    expense = Expense.new(name: 'Groceries', amount: 50.0, user:)
     expense.categories << category1
     expense.categories << category2
 

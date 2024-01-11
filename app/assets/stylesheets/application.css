@@ -1,50 +1,54 @@
 body * {
   text-decoration: none !important;
+
   /* font-family: 'Nova Proxima', sans-serif; */
+
   /* color: #434b54; */
+
   /* max-width: 470px; */
 }
 
+/*
 @font-face {
   font-family: 'Nova Proxima';
-  src: asset-url('Proxima Nova Lt_fontforyou.ttf') format('truetype'); /* adjust the path and format accordingly */
+  src: asset-url('Proxima Nova Lt_fontforyou.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
-html, body {
+html,
+body {
   /* width: 100%; */
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   color: #434b54;
   max-width: 470px;
   font-family: 'Nova Proxima', sans-serif;
-
 }
-  
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: 'Nova Regular', sans-serif;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .btn-primary {
-    background-color: #3778c2; /* Adjust color as needed */
-  }
-  
-  .btn-secondary {
-    background-color: #5fb523; /* Adjust color as needed */
-  }
 
-  /* <!-- #3778c2 (main)
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Nova Regular', sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #3778c2; /* Adjust color as needed */
+}
+
+.btn-secondary {
+  background-color: #5fb523; /* Adjust color as needed */
+}
+
+/* <!-- #3778c2 (main)
           #5fb523 (second)
           #434b54 (text) -->
 

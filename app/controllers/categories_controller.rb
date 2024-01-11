@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-# before_action :authenticate_user!
+  # before_action :authenticate_user!
   helper_method :calculate_total_amount
 
   def index
@@ -34,24 +34,24 @@ class CategoriesController < ApplicationController
     @category.icon.attach(category_params[:icon]) if category_params[:icon].present?
 
     puts "After attach: #{@category.inspect}" # Debugging statement
-    
+
     if @category.save
-      redirect_to categories_path, notice: "Category successfully created!"
+      redirect_to categories_path, notice: 'Category successfully created!'
     else
       puts @category.errors.full_messages
-      render "new"
+      render 'new'
     end
   end
 
   def sign_out
     sign_out(current_user)
-    redirect_to root_path, notice: "Signed out successfully."
+    redirect_to root_path, notice: 'Signed out successfully.'
   end
 
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to categories_path, notice: "Category successfully deleted!"
+    redirect_to categories_path, notice: 'Category successfully deleted!'
   end
 
   private
@@ -59,5 +59,4 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:name, :icon) if params[:category].present? # Add any additional attributes
   end
-
 end

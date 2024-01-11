@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       category_ids = params[:expense][:category_ids].reject(&:empty?)
       category = Category.find(category_ids.first) if category_ids.any?
-      redirect_to category_path(category), notice: "Expense successfully created!"
+      redirect_to category_path(category), notice: 'Expense successfully created!'
     else
       render 'new'
     end
@@ -23,7 +23,7 @@ class ExpensesController < ApplicationController
     @expense = Expense.find(params[:id])
     category = @expense.category_ids
     @expense.destroy
-    redirect_to category_path(category), notice: "Expense successfully deleted!"
+    redirect_to category_path(category), notice: 'Expense successfully deleted!'
   end
 
   private
@@ -31,5 +31,4 @@ class ExpensesController < ApplicationController
   def expense_params
     params.require(:expense).permit(:name, :amount, category_ids: [])
   end
-
 end
