@@ -1,51 +1,31 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
- /* @font-face {
-  font-family: 'Nova Regular';
-  src: url('../fonts/NOVABOLD.otf') format('otf');
-} */
-
- html, body {
-  width: 100%;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  /* font-family: 'Nova Regular', sans-serif;
-  top: 0; */
+body * {
+  text-decoration: none !important;
+  /* font-family: 'Nova Proxima', sans-serif; */
+  /* color: #434b54; */
+  /* max-width: 470px; */
 }
 
- .splash-screen {
-    text-align: center;
-    /* padding: 50px; */
-  }
+@font-face {
+  font-family: 'Nova Proxima';
+  src: asset-url('Proxima Nova Lt_fontforyou.ttf') format('truetype'); /* adjust the path and format accordingly */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  /* width: 100%; */
+  margin: 0; 
+  padding: 0; 
+  color: #434b54;
+  max-width: 470px;
+  font-family: 'Nova Proxima', sans-serif;
+
+}
   
   h1 {
     font-size: 36px;
     font-weight: bold;
     font-family: 'Nova Regular', sans-serif;
-  }
-  
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
   }
   
   .btn {
@@ -65,8 +45,8 @@
   }
 
   /* <!-- #3778c2 (main)
-#5fb523 (second)
-#434b54 (text) -->
+          #5fb523 (second)
+          #434b54 (text) -->
 
-<!-- headlines: proxima nova bold
-general text: proxima nova light --> */
+          <!-- headlines: proxima nova bold
+          general text: proxima nova light --> */
