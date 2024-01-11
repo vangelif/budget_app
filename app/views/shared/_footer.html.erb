@@ -1,12 +1,12 @@
 <!-- _footer.html.erb -->
 <footer class="footer">
-  <div class="container-fluid" style="background-color: #f8f9fa; text-align: center; padding: 10px;">
+  <div class="container-fluid" style="background-color: #5fb523; text-align: center; padding: 10px;">
     <% if title == 'ADD NEW CATEGORY' %>
-      <%= link_to new_category_path, class: 'btn btn-primary', style: 'background-color: #5fb523; cursor: pointer;' do %>
+      <%= link_to new_category_path, class: 'btn btn-primary fixed-link', style: 'background-color: #5fb523; cursor: pointer; border-radius: 0; width: 90%; border-color: white;' do %>
         <%= title %>
       <% end %>
     <% elsif title == 'ADD NEW EXPENSE' %>
-      <%= link_to expenses_new_path, class: 'btn btn-primary', style: 'background-color: #5fb523; cursor: pointer;' do %>
+      <%= link_to expenses_new_path, class: 'btn btn-primary fixed-link', style: 'background-color: #5fb523; cursor: pointer; border-radius: 0; width: 90%; border-color: white;' do %>
         <%= title %>
       <% end %>
     <% end %>
@@ -14,3 +14,4 @@
 </footer>
 
 
+ <%# style="margin-bottom: auto;" %>
