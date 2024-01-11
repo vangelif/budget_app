@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   root 'splash#index'
   # get "categories", to: "categories#index"
-  resources :categories, only: [:index, :new, :show, :create, :sign_out]
+  resources :categories, only: [:index, :new, :show, :create, :sign_out, :destroy] do
+    delete :destroy, on: :member
+  end
   resources :expenses, only: [:index, :new, :create, :destroy]
   # delete 'categories/sign_out', to: 'categories#sign_out', as: :sign_out_categories
 
