@@ -1,29 +1,43 @@
 <!-- app/views/categories/show.html.erb -->
+  <div class="row flex-column" style="height: 90vh; padding: 1%;">
 <%= render 'shared/header', title: 'CATEGORY DETAILS' %>
 
-
-<div>
-  <h1><%= @category.name %></h1>
-  <% if @category.icon.attached? %>
-    <%= image_tag url_for(@category.icon), width: 100, height: 100 %>
-  <% end %>
-  <!-- Display other category details as needed -->
-  <h2>Expenses:</h2>
-  <% total_amount = 0 %>
-  <% @category.expenses.each do |expense| %>
-    <div>
-      <p><strong><%= expense.name %></strong> </p>
-      <p><%= number_to_currency(expense.amount) %></p>
-      <p><%= expense.created_at.to_formatted_s(:long) %></p>
-      <!-- You can display other details of the expense as needed -->
+<section class="card mx-3 my-3 shadow"> <!-- Add 'shadow' class here -->
+  <ul class="card-body" style="list-style-type: none;">
+    <div class="d-flex align-items-center gap-2">
+      <%= image_tag url_for(@category.icon), width: 50, height: 50 %>
+      <div class="d-flex">
+        <strong><%= @category.name %></strong>
+        <%= button_to @category, method: :delete, class: "btn btn-link text-danger p-0" do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </div>
     </div>
+
     <hr>
-    <% total_amount += expense.amount %>
-  <% end %>
+    <% total_amount = 0 %>
+    <% @category.expenses.each do |expense| %>
+      <li class="d-flex">
+        <div class="d-flex flex-row w-100 justify-content-between">
+          <strong><%= expense.name %></strong> 
+          <p style="margin-left: auto;"><%= number_to_currency(expense.amount) %></p>
 
-<%= render 'shared/total_amount', total_amount: total_amount %>
+          <%= button_to expense_path(expense), method: :delete, class: "btn btn-link text-danger p-0" do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
 
-  </div>
+          <hr>
+        </div>
+      </li>
+      <span style="font-size: 12px;"><%= expense.created_at.to_formatted_s(:long) %></span>
+      <hr>
+      <% total_amount += expense.amount %>
+    <% end %>
+  </ul>
+  <%= render 'shared/total_amount', total_amount: calculate_total_amount(@category) %>
+</section>
 </div>
 
+<div class="row" style="height: 10vh;">
 <%= render 'shared/footer', title: 'ADD NEW EXPENSE' %>
+</div>

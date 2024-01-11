@@ -1,20 +1,31 @@
-<%= link_to category_path(category), id: dom_id(category), class: "card mx-2 mb-2 d-flex gap-1" do %>
+<%= link_to category_path(category), id: dom_id(category), class: "card mx-2 my-2 d-flex gap-1 text-decoration-none shadow" do %>
+  <section class="row p-2 mx-1 my-1">
+    <% if category.icon.attached? %>
+      <div class="col-3 px-1">
+        <%= image_tag url_for(category.icon), class: "img-fluid w-100 h-100" %>
+      </div>
+    <% end %>
 
-  <%= image_tag url_for(category.icon), width: 70, height: 70 if category.icon.attached? %>
-
-  <div class="d-flex flex-column w-100 gap-1">
-    <div class="h-100 d-flex justify-content-between align-items-center">
-      <p class="text-bold text-gray-lighter">
-        <%= category.name %> 
-      </p>
+    <div class="col-9 px-1">
+      <div class="d-flex flex-row w-100 justify-content-between">
+        <p style="font-size: 18px;">
+          <%= category.name %>
+        </p>
+        <p style="font-size: 16px; margin-left: auto;">
+          <strong>
+            <%= number_to_currency(calculate_total_amount(category)) %>
+          </strong>
+        </p>
+      </div>
+      <hr class="separator" />
+      <div class="d-flex flex-row w-100 justify-content-between">
+        <span style="font-size: 12px;">
+          <%= category.created_at.strftime("%d %b %Y") %>
+        </span>
+        <span style="font-size: 10px; margin-left: auto;">
+          (total: <%= category.expenses.count %>)
+        </span>
+      </div>
     </div>
-
-    <hr class="separator"/>
-
- 
-    <p class="text-caption text-gray-lighter">
-      <%= category.created_at.strftime("%d %b %Y") %>
-    </p>
-  </div>
+  </section>
 <% end %>
-

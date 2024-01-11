@@ -1,5 +1,6 @@
-<%= form_with(model: category, html: { multipart: true }, class: 'card mt-2 d-flex flex-column gap-1') do |form| %>
+<%= form_with(model: category, html: { multipart: true }, class: 'card my-2 mx-3 d-flex flex-column gap-1') do |form| %>
 
+<section class="card-body">
   <% if category.errors.any? %>
     <div style="color: red">
       <h2 class="mb-1"><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
@@ -25,3 +26,4 @@
 
   <%= form.submit class: 'btn-primary w-100 p-2 text-bold', style: 'color: white;' %>
 <% end %>
+</section>
