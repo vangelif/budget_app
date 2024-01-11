@@ -15,8 +15,15 @@ class ExpensesController < ApplicationController
       category = Category.find(category_ids.first) if category_ids.any?
       redirect_to category_path(category), notice: "Expense successfully created!"
     else
-      render "new"
+      render 'new'
     end
+  end
+
+  def destroy
+    @expense = Expense.find(params[:id])
+    category = @expense.category_ids
+    @expense.destroy
+    redirect_to category_path(category), notice: "Expense successfully deleted!"
   end
 
   private
