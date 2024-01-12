@@ -1,1 +1,16 @@
-<h1>hello!!</h1>
+  <div class="row flex-column" style="height: 90vh; padding: 1%;">
+<%= render 'shared/header', title: 'CATEGORIES' %>
+<%= render partial: 'shared/credit_section' %>
+
+
+<% @categories.each do |category| %>
+  <div class="category">
+    <%= render partial: 'category', locals: { category: category } %>
+  </div>
+<% end %>
+
+<%= render partial: 'shared/total_amount', locals: { total_amount: @total_amount } %>
+</div>
+<div class="row" style="height: 10vh;">
+<%= render 'shared/footer', title: 'ADD NEW CATEGORY' %>
+</div>
