@@ -6,12 +6,9 @@
         <%= title %>
       <% end %>
     <% elsif title == 'ADD NEW EXPENSE' %>
-      <%= link_to expenses_new_path, class: 'btn btn-primary fixed-link', style: 'background-color: #5fb523; cursor: pointer; border-radius: 0; width: 90%; border-color: white;' do %>
+      <%= link_to new_expense_path, class: 'btn btn-primary fixed-link', style: 'background-color: #5fb523; cursor: pointer; border-radius: 0; width: 90%; border-color: white;' do %>
         <%= title %>
       <% end %>
     <% end %>
   </div>
 </footer>
-
-
- <%# style="margin-bottom: auto;" %>
