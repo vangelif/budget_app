@@ -312,6 +312,7 @@ DEPENDENCIES
   pg (~> 1.5, >= 1.5.4)
   puma (>= 5.0)
   rails (~> 7.1.2)
+  rake
   rspec-rails (~> 5.0.0)
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
