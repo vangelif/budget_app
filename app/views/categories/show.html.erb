@@ -1,8 +1,8 @@
 <!-- app/views/categories/show.html.erb -->
   <div class="row flex-column" style="height: 90vh; padding: 1%;">
 <%= render 'shared/header', title: 'CATEGORY DETAILS' %>
-
-<section class="card mx-3 my-3 shadow"> <!-- Add 'shadow' class here -->
+<div class ="ml-3">
+<section class="card mx-2 my-3 shadow">
   <ul class="card-body" style="list-style-type: none;">
     <div class="d-flex align-items-center gap-2">
       <%= image_tag url_for(@category.icon), width: 50, height: 50 %>
@@ -36,6 +36,7 @@
   </ul>
   <%= render 'shared/total_amount', total_amount: calculate_total_amount(@category) %>
 </section>
+</div>
 </div>
 
 <div class="row" style="height: 10vh;">

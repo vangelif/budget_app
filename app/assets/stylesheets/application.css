@@ -1,35 +1,30 @@
 body * {
   text-decoration: none !important;
-
-  /* font-family: 'Nova Proxima', sans-serif; */
-
-  /* color: #434b54; */
-
-  /* max-width: 470px; */
+  font-family: 'Proxima Nova', sans-serif;
 }
 
-/*
 @font-face {
-  font-family: 'Nova Proxima';
-  src: asset-url('Proxima Nova Lt_fontforyou.ttf') format('truetype');
+  font-family: 'Proxima Nova';
+  src: url('/app/assets/fonts/Proxima-Nova.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 html,
 body {
-  /* width: 100%; */
   margin: 0;
   padding: 0;
   color: #434b54;
   max-width: 470px;
-  font-family: 'Nova Proxima', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
+
+  /* font-family: */
 }
 
 h1 {
   font-size: 36px;
   font-weight: bold;
-  font-family: 'Nova Regular', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .btn {

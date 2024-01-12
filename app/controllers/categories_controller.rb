@@ -3,9 +3,13 @@ class CategoriesController < ApplicationController
   helper_method :calculate_total_amount
 
   def index
-    @categories = current_user.categories
-    @total_amount = calculate_total_amount(current_user)
-    puts "In the index: #{@total_amount.inspect}"
+    if user_signed_in?
+      @categories = current_user.categories
+      @total_amount = calculate_total_amount(current_user)
+      puts "In the index: #{@total_amount.inspect}"
+    else
+      @categories = [] # Provide an empty array if the user is not signed in
+    end
   end
 
   def new
