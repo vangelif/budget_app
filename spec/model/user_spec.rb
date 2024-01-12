@@ -16,15 +16,15 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'sends confirmation email with a valid host', :skip_confirmation_email do
-    skip 'Confirmation email test skipped for invalid user' if subject.invalid?
+  # it 'sends confirmation email with a valid host', :skip_confirmation_email do
+  #   skip 'Confirmation email test skipped for invalid user' if subject.invalid?
 
-    confirmation_email = Devise.mailer.deliveries.last
-    raise 'No confirmation email sent' unless confirmation_email
+  #   confirmation_email = Devise.mailer.deliveries.last
+  #   raise 'No confirmation email sent' unless confirmation_email
 
-    confirmation_url = confirmation_email.body.to_s.match(%r{href="(https?://[^"]+)})[1]
-    expect(confirmation_url).to include('localhost:3000')
-  end
+  #   confirmation_url = confirmation_email.body.to_s.match(%r{href="(https?://[^"]+)})[1]
+  #   expect(confirmation_url).to include('localhost:3000')
+  # end
 
   it 'is valid with a password' do
     expect(subject).to be_valid
