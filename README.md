@@ -62,7 +62,7 @@
 ## 🛠 Live Demo <a name="live-demo"></a>
 
 - Video Demo: [Video Demo Link](https://www.loom.com/share/46709481b1f245129309be56494c13e8?sid=0556252b-160a-4222-9f83-b21739218523)
-- Live Demo: []()
+- Live Demo: [Live Demo Link](https://mysite-yx9a.onrender.com/)
 
 <!-- GETTING STARTED -->
 
@@ -124,9 +124,9 @@ You can deploy this project using your own deployment solution
 
 👤 **Vangelis**
 
-- GitHub: [@vangelif](https://github.com/vangelif)
-- Twitter: [@vangfot](https://twitter.com/vangfot)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/vangfot)
+- [X](https://twitter.com/vangfot)
+- [Github](https://github.com/vangelif)
+- [LinkedIn](https://linkedin.com/in/vangfot)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,5 +168,5 @@ I would like to thank [Microverse](https://bit.ly/MicroverseTN) and to Gregoire 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/vangelif/budget_app/blob/4eb964a5f01635f196d88c99ff9fdae5a46c9b5e/LICENSE) licensed.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
