@@ -24,6 +24,7 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem 'bootstrap', '~> 5.1.3'
 gem 'devise'
 gem 'jbuilder'
 gem 'pg', '~> 1.5', '>= 1.5.4'

@@ -1,0 +1,29 @@
+<%= form_with(model: category, html: { multipart: true }, class: 'card my-2 mx-3 d-flex flex-column gap-1') do |form| %>
+
+<section class="card-body">
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2 class="mb-1"><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul class="list-group">
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, class: 'w-100 form-control', placeholder: 'Category Name' %>
+  </div>
+
+    <hr class="separator" />
+
+<div class="mb-2">
+  <%= form.label :icon, style: "display: block", class: 'mb-1' %>
+  <%= form.file_field :icon, accept: 'image/png,image/gif,image/jpeg', class: 'form-file' %>
+</div>
+
+  <%= form.submit class: 'btn-primary w-100 p-2 text-bold', style: 'color: white;' %>
+<% end %>
+</section>

@@ -1,11 +1,18 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
+  get 'expenses/index'
+  get 'expenses/new'
+  
   devise_for :users
-  # get 'categories/index'
-  root "categories#index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  root 'splash#index'
+  # get "categories", to: "categories#index"
+  resources :categories, only: [:index, :new, :show, :create, :sign_out, :destroy] do
+    delete :destroy, on: :member
+  end
+  resources :expenses, only: [:index, :new, :create, :destroy]
+  # delete 'categories/sign_out', to: 'categories#sign_out', as: :sign_out_categories
+
+
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
